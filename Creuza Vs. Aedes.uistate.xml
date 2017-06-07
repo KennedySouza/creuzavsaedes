@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="1">Fase1</layout>
+        <layout order="3">Start</layout>
+        <layout order="5">GameOver1</layout>
+        <event-sheet order="2">Fase1</event-sheet>
+        <event-sheet order="4">Start</event-sheet>
+        <event-sheet order="6">GameOver1</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/moskito/" />
+        <folder expanded="1" path="animation-folder/foco/" />
+        <folder expanded="1" path="animation-folder/dayLight/" />
+        <folder expanded="1" path="animation-folder/downShadow/" />
+        <folder expanded="1" path="animation-folder/MainPerson/" />
+        <folder expanded="1" path="animation-folder/MainPerson_mosKolision/" />
+        <folder expanded="1" path="animation-folder/FullBodyColision/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Inceticida/" />
+        <folder expanded="1" path="animation-folder/Repelente/" />
+        <folder expanded="1" path="animation-folder/Febre/" />
+        <folder expanded="1" path="animation-folder/DorCbc/" />
+        <folder expanded="1" path="animation-folder/Bottle1/" />
+        <folder expanded="1" path="animation-folder/Bottle2/" />
+        <folder expanded="1" path="animation-folder/Bottle3/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Life/" />
+        <folder expanded="1" path="animation-folder/RepelBar/" />
+        <folder expanded="1" path="animation-folder/insetBar/" />
+        <folder expanded="1" path="animation-folder/lifeBar/" />
+        <folder expanded="1" path="animation-folder/CXZ/" />
+        <folder expanded="1" path="animation-folder/start/" />
+        <folder expanded="1" path="animation-folder/logar/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/attack/" />
+        <folder expanded="1" path="animation-folder/MainPerson2/" />
+        <folder expanded="1" path="animation-folder/balde/" />
+        <folder expanded="1" path="animation-folder/bar/" />
+        <folder expanded="1" path="animation-folder/cesta/" />
+        <folder expanded="1" path="animation-folder/balao/" />
+        <folder expanded="1" path="animation-folder/downShadow2/" />
+        <folder expanded="1" path="animation-folder/barreiras/" />
+        <folder expanded="1" path="animation-folder/tree1/" />
+        <folder expanded="1" path="animation-folder/tree2/" />
+        <folder expanded="1" path="animation-folder/tree3/" />
+        <folder expanded="1" path="animation-folder/tree4/" />
+        <folder expanded="1" path="animation-folder/balao2/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/topCaption/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+    </folders-expanded>
+</c2uistate>

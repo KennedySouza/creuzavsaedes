@@ -1,0 +1,2096 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Creuza Vs. Aedes</name>
+    <description></description>
+    <version>0.47</version>
+    <author>LADES</author>
+    <author-email>kennedy.es.souza@gmail.com</author-email>
+    <author-website>http://facompcastanhal.ufpa.br/lades/creuzaxaedes</author-website>
+    <app-id>com.lades.creuzaxzika</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>22700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>995</width>
+        <height>560</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Fase1</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Low quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="moskito" sid="1686789355649253">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Vida" sid="8150626895319806" type="number" />
+                <instance-variable name="ovula" sid="2507059044550905" type="number" />
+                <instance-variable name="inPlace" sid="4142377519629381" type="number" />
+                <instance-variable name="northX" sid="7616039294208822" type="number" />
+                <instance-variable name="northY" sid="4629953079336101" type="number" />
+                <instance-variable name="inEdge" sid="9688729433267853" type="number" />
+                <instance-variable name="yourFoco" sid="4480444607894726" type="number" />
+                <instance-variable name="perseguindo" sid="5093369591184146" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="6203669871888988">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="2525410385697759">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="895068987757572">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="3731451342083749">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="3727042663873516">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="stopped" pingpong="0" repeatcount="1" repeatto="0" sid="420028214215788" speed="30">
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.6" />
+                </animation>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4739335500388322" speed="30">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.533333" />
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.533333" />
+                </animation>
+                <animation framecount="1" loop="1" name="morto" pingpong="0" repeatcount="1" repeatto="0" sid="146784116154941" speed="30">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.529412">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="foco" sid="6645066557893684">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Ocupado" sid="2269053173193207" type="number" />
+                <instance-variable name="emcuba" sid="8867501228691267" type="number" />
+                <instance-variable name="ovulado" sid="2942947805601798" type="number" />
+                <instance-variable name="ani" sid="2715524034428345" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="1495710466877724">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Sprite</type>
+                <type>foco</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="9554874100421545" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Ani0" pingpong="0" repeatcount="1" repeatto="0" sid="3767046664922073" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\balde250(1).png">
+                        <collision-poly>
+                            <point x="0.576" y="0.5" />
+                            <point x="0.569" y="0.596" />
+                            <point x="0.383" y="0.594" />
+                            <point x="0.376" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Ani1" pingpong="0" repeatcount="1" repeatto="0" sid="93906494523295" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\flor250.png">
+                        <collision-poly>
+                            <point x="0.525" y="0.56" />
+                            <point x="0.52" y="0.602" />
+                            <point x="0.399" y="0.6" />
+                            <point x="0.402" y="0.5585" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Ani2" pingpong="0" repeatcount="1" repeatto="0" sid="427484188498868" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\pneu250.png">
+                        <collision-poly>
+                            <point x="0.473" y="0.424" />
+                            <point x="0.666" y="0.469" />
+                            <point x="0.667" y="0.563" />
+                            <point x="0.464" y="0.642" />
+                            <point x="0.283" y="0.566" />
+                            <point x="0.281" y="0.465" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="AniOut0" pingpong="0" repeatcount="1" repeatto="0" sid="1011069955463367" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\balde250empty.png">
+                        <collision-poly>
+                            <point x="0.574" y="0.5" />
+                            <point x="0.564" y="0.595" />
+                            <point x="0.387" y="0.596" />
+                            <point x="0.379" y="0.501" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="AniOut1" pingpong="0" repeatcount="1" repeatto="0" sid="1876991070075675" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\flor250empty.png">
+                        <collision-poly>
+                            <point x="0.522" y="0.553" />
+                            <point x="0.518" y="0.601" />
+                            <point x="0.402" y="0.6" />
+                            <point x="0.4" y="0.551" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="AniOut2" pingpong="0" repeatcount="1" repeatto="0" sid="1750025681272224" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\pneu250empty.png">
+                        <collision-poly>
+                            <point x="0.473" y="0.414" />
+                            <point x="0.668" y="0.459" />
+                            <point x="0.665" y="0.563" />
+                            <point x="0.469" y="0.64" />
+                            <point x="0.283" y="0.564" />
+                            <point x="0.281" y="0.47" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ground1" sid="5537418329713741">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\KennedySouza\Google Drive\ZIKA\grass_.png" />
+        </object-type>
+        <object-type name="dayLight" sid="2771481530179054">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="6058485416526601">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="823426390432413" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\files\Animations\DayLight\Default\000.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.810156" y="0.525391" />
+                            <point x="0.5" y="0.535156" />
+                            <point x="0.189844" y="0.525391" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="downShadow" sid="5701371190590939">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8413703013061293" speed="5">
+                    <frame duration="1" hotspotX="0.504854" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\downShadow.png">
+                        <collision-poly>
+                            <point x="0.495146" y="0.380952" />
+                            <point x="0.699029" y="0.5" />
+                            <point x="0.495146" y="0.619048" />
+                            <point x="0.300971" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MainPerson" sid="695434547714784">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="life" sid="524983753199322" type="number" />
+                <instance-variable name="Cleaning" sid="5584961751133124" type="number" />
+                <instance-variable name="Cleanned_Bagui" sid="8606804367379893" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="8999669487563715">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="2489334250929103">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="5184074053074312">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="5001102172220811">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="2019137546462623">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="9172218255766598">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="StopFront" pingpong="0" repeatcount="1" repeatto="0" sid="7280951779754711" speed="15">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\pixel\front.png">
+                        <collision-poly>
+                            <point x="0.321429" y="0.794445" />
+                            <point x="0.821428" y="0.794445" />
+                            <point x="0.880952" y="0.972222" />
+                            <point x="0.25" y="0.977778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="Zika_StopFrontSick" pingpong="0" repeatcount="1" repeatto="0" sid="6007292738151167" speed="5">
+                    <frame duration="1" hotspotX="0.473684" hotspotY="0.44186" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\Doente de zika\Zika_front.png">
+                        <collision-poly>
+                            <point x="0.309524" y="0.8" />
+                            <point x="0.714285" y="0.794445" />
+                            <point x="0.809524" y="0.977778" />
+                            <point x="0.178571" y="0.977778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="FrontWalk" pingpong="0" repeatcount="1" repeatto="0" sid="4916978450742779" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.309524" y="0.788889" />
+                            <point x="0.714285" y="0.788889" />
+                            <point x="0.797619" y="0.977778" />
+                            <point x="0.202381" y="0.972222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.308824" y="0.788889" />
+                            <point x="0.823529" y="0.788889" />
+                            <point x="0.838235" y="0.911111" />
+                            <point x="0.235294" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.321429" y="0.816666" />
+                            <point x="0.714285" y="0.816667" />
+                            <point x="0.833333" y="0.966667" />
+                            <point x="0.178571" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.220588" y="0.805555" />
+                            <point x="0.720588" y="0.805556" />
+                            <point x="0.735294" y="0.972222" />
+                            <point x="0.161765" y="0.905555" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Zika_FrontWalkSick" pingpong="0" repeatcount="1" repeatto="0" sid="8240404949552909" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.192744" y="0.804444" />
+                            <point x="0.755101" y="0.799013" />
+                            <point x="0.936507" y="0.978272" />
+                            <point x="0" y="0.961975" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.107266" y="0.771358" />
+                            <point x="1" y="0.787655" />
+                            <point x="1" y="0.88" />
+                            <point x="0" y="0.950617" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.174603" y="0.820741" />
+                            <point x="0.755101" y="0.820741" />
+                            <point x="0.918366" y="0.978272" />
+                            <point x="0" y="0.967408" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0" y="0.782222" />
+                            <point x="0.743944" y="0.782223" />
+                            <point x="0.910035" y="0.950617" />
+                            <point x="0" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="FrontRun" pingpong="0" repeatcount="1" repeatto="0" sid="8701687862662845" speed="10">
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.338235" y="0.801136" />
+                            <point x="0.808823" y="0.744318" />
+                            <point x="0.823529" y="0.863636" />
+                            <point x="0.25" y="0.971591" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.308823" y="0.813953" />
+                            <point x="0.779412" y="0.80814" />
+                            <point x="0.823529" y="0.912791" />
+                            <point x="0.205882" y="0.976744" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.191176" y="0.738636" />
+                            <point x="0.705882" y="0.789773" />
+                            <point x="0.764706" y="0.977273" />
+                            <point x="0.147059" y="0.857955" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.220588" y="0.802326" />
+                            <point x="0.691176" y="0.802326" />
+                            <point x="0.764706" y="0.965116" />
+                            <point x="0.176471" y="0.912791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopBack" pingpong="0" repeatcount="1" repeatto="0" sid="180820082246993" speed="15">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\pixel\back.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.789773" />
+                            <point x="0.72619" y="0.795454" />
+                            <point x="0.75" y="0.977273" />
+                            <point x="0.25" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="Zika_StopBackSick" pingpong="0" repeatcount="1" repeatto="0" sid="2250110866045862" speed="5">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.428571" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\Doente de zika\Zika_back.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.784091" />
+                            <point x="0.642857" y="0.784091" />
+                            <point x="0.761904" y="0.971591" />
+                            <point x="0.22619" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="BackWalk" pingpong="0" repeatcount="1" repeatto="0" sid="5724319013147792" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.309524" y="0.784091" />
+                            <point x="0.654762" y="0.778409" />
+                            <point x="0.75" y="0.954545" />
+                            <point x="0.22619" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.277778" y="0.778409" />
+                            <point x="0.75" y="0.767046" />
+                            <point x="0.736111" y="0.886364" />
+                            <point x="0.25" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.309524" y="0.784091" />
+                            <point x="0.690476" y="0.789773" />
+                            <point x="0.761904" y="0.965909" />
+                            <point x="0.238095" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.222222" y="0.767045" />
+                            <point x="0.736111" y="0.767045" />
+                            <point x="0.777778" y="0.977273" />
+                            <point x="0.222222" y="0.909091" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="BackRun" pingpong="0" repeatcount="1" repeatto="0" sid="7762156949730828" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.325" y="0.778409" />
+                            <point x="0.7125" y="0.789773" />
+                            <point x="0.7625" y="0.852273" />
+                            <point x="0.2625" y="0.977273" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.291667" y="0.784884" />
+                            <point x="0.763889" y="0.790698" />
+                            <point x="0.777778" y="0.930233" />
+                            <point x="0.236111" y="0.965116" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.275" y="0.767046" />
+                            <point x="0.6875" y="0.784091" />
+                            <point x="0.7125" y="0.977273" />
+                            <point x="0.2625" y="0.840909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.263889" y="0.77907" />
+                            <point x="0.666667" y="0.77907" />
+                            <point x="0.763889" y="0.97093" />
+                            <point x="0.236111" y="0.912791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Zika_BackWalkSick" pingpong="0" repeatcount="1" repeatto="0" sid="3350070844969303" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.431818">
+                        <collision-poly>
+                            <point x="0.185941" y="0.800104" />
+                            <point x="0.76644" y="0.800103" />
+                            <point x="0.875282" y="0.972237" />
+                            <point x="0.0770971" y="0.972237" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.431818">
+                        <collision-poly>
+                            <point x="0.148148" y="0.749612" />
+                            <point x="0.91358" y="0.749612" />
+                            <point x="0.987653" y="0.871772" />
+                            <point x="0" y="0.955062" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.431818">
+                        <collision-poly>
+                            <point x="0.240363" y="0.805656" />
+                            <point x="0.80272" y="0.805656" />
+                            <point x="0.893423" y="0.972237" />
+                            <point x="0.0770971" y="0.966684" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.431818">
+                        <collision-poly>
+                            <point x="0.0802471" y="0.749612" />
+                            <point x="0.895061" y="0.749612" />
+                            <point x="1" y="0.943957" />
+                            <point x="0.00617245" y="0.882877" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopSide" pingpong="0" repeatcount="1" repeatto="0" sid="7206919990094745" speed="15">
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.456522">
+                        <collision-poly>
+                            <point x="0.5625" y="0.782609" />
+                            <point x="0.760416" y="0.77174" />
+                            <point x="0.875" y="0.983696" />
+                            <point x="0.5" y="0.951087" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="Zika_StopSideSick" pingpong="0" repeatcount="1" repeatto="0" sid="4419825501811634" speed="5">
+                    <frame duration="1" hotspotX="0.681818" hotspotY="0.431818" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\Doente de zika\zika_side.png">
+                        <collision-poly>
+                            <point x="0.916666" y="0.847826" />
+                            <point x="0.875" y="0.964674" />
+                            <point x="0.510416" y="0.923913" />
+                            <point x="0.583333" y="0.771738" />
+                            <point x="0.802083" y="0.777174" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="SideWalk" pingpong="0" repeatcount="1" repeatto="0" sid="2232024759588371" speed="5">
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.916667" y="0.956522" />
+                            <point x="0.5" y="0.951087" />
+                            <point x="0.5625" y="0.788044" />
+                            <point x="0.822917" y="0.782609" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.357143" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.428571" y="0.988889" />
+                            <point x="0.196429" y="0.883333" />
+                            <point x="0.357143" y="0.75" />
+                            <point x="0.8125" y="0.761111" />
+                            <point x="0.955357" y="0.883334" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.916667" y="0.978261" />
+                            <point x="0.489583" y="0.951087" />
+                            <point x="0.552083" y="0.788044" />
+                            <point x="0.8125" y="0.777175" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.357143" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.794642" y="0.983333" />
+                            <point x="0.357143" y="0.938889" />
+                            <point x="0.245536" y="0.841667" />
+                            <point x="0.357143" y="0.766667" />
+                            <point x="0.803571" y="0.772222" />
+                            <point x="0.964286" y="0.908334" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="SideRun" pingpong="0" repeatcount="1" repeatto="0" sid="685395409932719" speed="10">
+                    <frame duration="1" hotspotX="0.580645" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.991935" y="0.912791" />
+                            <point x="0.838709" y="0.97093" />
+                            <point x="0.233871" y="0.924419" />
+                            <point x="0.145161" y="0.796512" />
+                            <point x="0.241936" y="0.744186" />
+                            <point x="0.830645" y="0.831395" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.55" y="1" />
+                            <point x="0.28" y="0.920455" />
+                            <point x="0.42" y="0.784091" />
+                            <point x="0.58" y="0.818182" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.580645" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.830645" y="0.982558" />
+                            <point x="0.258064" y="0.883721" />
+                            <point x="0.165323" y="0.776163" />
+                            <point x="0.298387" y="0.726744" />
+                            <point x="0.959677" y="0.901163" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.58" y="1" />
+                            <point x="0.25" y="0.903409" />
+                            <point x="0.37" y="0.801136" />
+                            <point x="0.61" y="0.823863" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Zika_SideWalkSick" pingpong="0" repeatcount="1" repeatto="0" sid="4740827778881257" speed="5">
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.001737" y="0.765124" />
+                            <point x="0.266059" y="0.754726" />
+                            <point x="0.354167" y="0.921077" />
+                            <point x="0" y="0.944471" />
+                            <point x="0" y="0.8431" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.592593" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.098545" y="0.755063" />
+                            <point x="0.616402" y="0.755062" />
+                            <point x="0.789021" y="0.855556" />
+                            <point x="0.597222" y="0.939753" />
+                            <point x="0" y="0.863703" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.251736" y="0.770322" />
+                            <point x="0.516059" y="0.77552" />
+                            <point x="0.616754" y="0.892487" />
+                            <point x="0.264323" y="0.957467" />
+                            <point x="0.050348" y="0.863893" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0" y="0.977778" />
+                            <point x="0" y="0.977778" />
+                            <point x="0" y="0.977778" />
+                            <point x="0" y="0.977778" />
+                            <point x="0" y="0.977778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="2231364568118949" speed="10">
+                    <frame duration="1" hotspotX="0.205882" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida1.png">
+                        <collision-poly>
+                            <point x="0.897059" y="0.638298" />
+                            <point x="0.470588" y="0.382979" />
+                            <point x="0.470588" y="0.297872" />
+                            <point x="0.970588" y="0.0851064" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.186667" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida2.png">
+                        <collision-poly>
+                            <point x="0.893333" y="0.744681" />
+                            <point x="0.426666" y="0.404255" />
+                            <point x="0.44" y="0.148936" />
+                            <point x="1" y="0.0212766" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.215385" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida3.png">
+                        <collision-poly>
+                            <point x="0.923077" y="0.702128" />
+                            <point x="0.661538" y="0.553192" />
+                            <point x="0.676923" y="0.106383" />
+                            <point x="0.953846" y="0.191489" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.4375" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida.png">
+                        <collision-poly>
+                            <point x="1" y="0.510638" />
+                            <point x="0.96875" y="0.340426" />
+                            <point x="0.96875" y="0.276596" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Die" pingpong="0" repeatcount="0" repeatto="0" sid="7481783763155171" speed="3">
+                    <frame duration="1" hotspotX="0.484848" hotspotY="0.21875" original-source="D:\Carlos\Ufpa\Projects\Construct\sit.png" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="-0.5" original-source="D:\Carlos\Ufpa\Projects\Construct\dead.png" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="-0.5" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="-0.5" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="-0.5" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="-0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="8312215143528965">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="MainPerson_mosKolision" sid="2988740757100497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5876899351825012" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FullBodyColision" sid="6814503242223671">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="351804753700889" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="7234108085366605">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Sprite" sid="6527800019931637">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="OcupadoBald" sid="3454624476591058" type="number" />
+                <instance-variable name="cleaned" sid="5400633065666313" type="number" />
+                <instance-variable name="reciclable" sid="7063606758844506" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="1402109661838797">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Sprite</type>
+                <type>foco</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8163076858287066" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\balde (1).png">
+                        <collision-poly>
+                            <point x="0.115385" y="0.0997537" />
+                            <point x="0.5" y="0.0332512" />
+                            <point x="0.884615" y="0.0997537" />
+                            <point x="0.923077" y="0.465517" />
+                            <point x="0.846154" y="0.831281" />
+                            <point x="0.5" y="0.931035" />
+                            <point x="0.153846" y="0.831281" />
+                            <point x="0.0769231" y="0.465517" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="8813392411367274">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="OcupadoFlor" sid="8013014467450233" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="632464095891416">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Foco" pingpong="0" repeatcount="1" repeatto="0" sid="914446654157566" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.529412" original-source="D:\Carlos\Ufpa\Projects\Construct\flwoer.png">
+                        <collision-poly>
+                            <point x="0.75" y="0.470588" />
+                            <point x="0.8125" y="0.970588" />
+                            <point x="0.0833333" y="0.941176" />
+                            <point x="0.166667" y="0.470588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ExFoco" pingpong="0" repeatcount="1" repeatto="0" sid="375731054293462" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.529412">
+                        <collision-poly>
+                            <point x="0.270834" y="0.455882" />
+                            <point x="0.75" y="0.470588" />
+                            <point x="0.833333" y="0.882353" />
+                            <point x="0.0833333" y="0.941176" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="2571124683095273">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="OcupadoPneu" sid="6257616880938783" type="number" />
+                <instance-variable name="beCleanned" sid="6626971877181702" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="1722192061737392">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Foco" pingpong="0" repeatcount="1" repeatto="0" sid="2872955041065729" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\exTire.png">
+                        <collision-poly>
+                            <point x="0.130435" y="0.166667" />
+                            <point x="0.47826" y="0.0555556" />
+                            <point x="0.869565" y="0.166667" />
+                            <point x="0.956522" y="0.5" />
+                            <point x="0.869565" y="0.833333" />
+                            <point x="0.47826" y="0.944444" />
+                            <point x="0.130435" y="0.833333" />
+                            <point x="0.0434783" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ExFoco" pingpong="0" repeatcount="1" repeatto="0" sid="4854689170778437" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\tire.png">
+                        <collision-poly>
+                            <point x="0.130435" y="0.166667" />
+                            <point x="0.47826" y="0.0555556" />
+                            <point x="0.869565" y="0.166667" />
+                            <point x="0.956522" y="0.5" />
+                            <point x="0.869565" y="0.833333" />
+                            <point x="0.47826" y="0.944444" />
+                            <point x="0.130435" y="0.833333" />
+                            <point x="0.0434783" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Vidatxt" sid="153214042036491">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1803271432172726">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Sprite4" sid="8136823224715148">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6262542975777967" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="1053635156489108">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114660959427141" speed="5">
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.5" original-source="D:\Carlos\Ufpa\Projects\Construct\bottle 3.png" />
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.5" original-source="D:\Carlos\Ufpa\Projects\Construct\bottle.png" />
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.5" original-source="D:\Carlos\Ufpa\Projects\Construct\bottle2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="8875573412275686">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7982599152867482" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Inceticida" sid="8641007822319028">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5390752493553398" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\insecticida_edit.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.1" />
+                            <point x="0.5" y="0.0333333" />
+                            <point x="0.8" y="0.0666667" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.9" y="0.966667" />
+                            <point x="0.1" y="0.966667" />
+                            <point x="0.1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="4746395215183705">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Inseticidatxt" sid="686605562763317">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3731474935070672">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Repelente" sid="7917642746907437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8474583835387666" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\repelentsbottle.png">
+                        <collision-poly>
+                            <point x="0.26" y="0.182194" />
+                            <point x="0.5" y="0.0455486" />
+                            <point x="0.74" y="0.182194" />
+                            <point x="0.98" y="0.501036" />
+                            <point x="0.86" y="0.865425" />
+                            <point x="0.5" y="0.910973" />
+                            <point x="0.14" y="0.865425" />
+                            <point x="0.02" y="0.501036" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Repelentetxt" sid="7733841703610762">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="7413801253698797">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Text2" sid="7604387062210543">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Febre" sid="7772104656805584">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5213460285239145">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4875514683926338" speed="5">
+                    <frame duration="1" hotspotX="0.500503" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\febre.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DorCbc" sid="1558128417485458">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="2424974599284127">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4463315049816575" speed="5">
+                    <frame duration="1" hotspotX="0.500503" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\dorCabeca.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="7555153143821093">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Bottle1" sid="1759081034593792">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="v1" sid="6364765091372868" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="9078127923513859">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5213357153350109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\bottle 3.png">
+                        <collision-poly>
+                            <point x="0.357143" y="0.119048" />
+                            <point x="0.5" y="0.0238095" />
+                            <point x="0.642857" y="0.119048" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.857143" y="0.952381" />
+                            <point x="0.5" y="0.97619" />
+                            <point x="0.142857" y="0.952381" />
+                            <point x="0.0714286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bottle2" sid="1556499501609236">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="2429726889036952">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2892946103881532" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\bottle.png">
+                        <collision-poly>
+                            <point x="0.357143" y="0.119048" />
+                            <point x="0.5" y="0.0238095" />
+                            <point x="0.642857" y="0.119048" />
+                            <point x="0.857143" y="0.5" />
+                            <point x="0.857143" y="0.952381" />
+                            <point x="0.142857" y="0.952381" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bottle3" sid="6171529107108985">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="8960478664458312">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5757955020070439" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\bottle.png">
+                        <collision-poly>
+                            <point x="0.357143" y="0.119048" />
+                            <point x="0.5" y="0.0238095" />
+                            <point x="0.642857" y="0.119048" />
+                            <point x="0.857143" y="0.5" />
+                            <point x="0.857143" y="0.952381" />
+                            <point x="0.142857" y="0.952381" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="5427977141096601">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6884131118253859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\Hud_Life.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Life" sid="5234588369034927">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="951539813954842">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8868463323482914" speed="5">
+                    <frame duration="1" hotspotX="0.476378" hotspotY="0.5" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\Hud_Life.png">
+                        <collision-poly>
+                            <point x="0.00787402" y="0.0909091" />
+                            <point x="0.5" y="0.0454545" />
+                            <point x="0.988189" y="0.136364" />
+                            <point x="0.988189" y="0.5" />
+                            <point x="0.972441" y="0.681818" />
+                            <point x="0.5" y="0.909091" />
+                            <point x="0.015748" y="0.818182" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RepelBar" sid="3661057149519953">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9939130069085576">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9062606463763824" speed="5">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.52" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\Hud_repelents.png">
+                        <collision-poly>
+                            <point x="0.0521739" y="0.24" />
+                            <point x="0.495652" y="0.24" />
+                            <point x="0.973913" y="0.12" />
+                            <point x="0.991304" y="0.48" />
+                            <point x="0.982609" y="0.92" />
+                            <point x="0.495652" y="0.8" />
+                            <point x="0.0434783" y="0.8" />
+                            <point x="0.00869565" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="insetBar" sid="4767792726448889">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3583588283972972">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4943848065714032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52" original-source="C:\Users\PRISM\Google Drive\ZIKA\Pixel\hud_insect.png">
+                        <collision-poly>
+                            <point x="0.0535714" y="0.24" />
+                            <point x="0.5" y="0.24" />
+                            <point x="0.982143" y="0.08" />
+                            <point x="0.982143" y="0.92" />
+                            <point x="0.5" y="0.8" />
+                            <point x="0.0446429" y="0.8" />
+                            <point x="0.00892857" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InceticidaProg" sid="2596226191393966">
+            <plugin id="progressbar" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="4450860625890826">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="RepelenteProg" sid="8493768780169188">
+            <plugin id="progressbar" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="7085660907908688">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="336134977891912">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="VidaProg" sid="8103652645474575">
+            <plugin id="progressbar" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9347694273605082">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="4031253607299644">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lifeBar" sid="4746892228724316">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1140790879032147">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="stage4" pingpong="0" repeatcount="1" repeatto="0" sid="3842338590532833" speed="5">
+                    <frame duration="1" hotspotX="0.599099" hotspotY="0.6" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\health-bar_0003_Camada-1-copiar-3.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="stage3" pingpong="0" repeatcount="1" repeatto="0" sid="8171438027274054" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\health-bar_0002_Camada-1-copiar-2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="stage2" pingpong="0" repeatcount="1" repeatto="0" sid="2811636116597409" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\health-bar_0001_Camada-1-copiar.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="stage1" pingpong="0" repeatcount="1" repeatto="0" sid="8010467706280049" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\health-bar_0000_1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="score" sid="846450648432804">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="679068512012194">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="CXZ" sid="997559211280187">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1382870024103121" speed="5">
+                    <frame duration="1" hotspotX="0.501712" hotspotY="0.5125" original-source="C:\Users\waves\Google Drive\ZIKA\menu dos zika\creuza vs aedes.png">
+                        <collision-poly>
+                            <point x="0.0253165" y="0.162162" />
+                            <point x="0.957806" y="0.27027" />
+                            <point x="0.966245" y="0.783784" />
+                            <point x="0.49789" y="0.783784" />
+                            <point x="0.0379747" y="0.756757" />
+                            <point x="0.00843882" y="0.486486" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start" sid="5608985673641505">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101561260999187" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.529412" original-source="C:\Users\WAVES\Pictures\GAME\START.png">
+                        <collision-poly>
+                            <point x="0.0535714" y="0.176471" />
+                            <point x="0.5" y="0.117647" />
+                            <point x="0.946429" y="0.176471" />
+                            <point x="0.964286" y="0.470588" />
+                            <point x="0.928571" y="0.764706" />
+                            <point x="0.5" y="0.823529" />
+                            <point x="0.0714286" y="0.764706" />
+                            <point x="0.0535714" y="0.470588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="High" pingpong="0" repeatcount="1" repeatto="0" sid="7623126459655183" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.529412" original-source="C:\Users\WAVES\Pictures\GAME\START_.png">
+                        <collision-poly>
+                            <point x="0.0535714" y="0.176471" />
+                            <point x="0.5" y="0.117647" />
+                            <point x="0.946429" y="0.176471" />
+                            <point x="0.964286" y="0.470588" />
+                            <point x="0.928571" y="0.764706" />
+                            <point x="0.5" y="0.823529" />
+                            <point x="0.0714286" y="0.764706" />
+                            <point x="0.0535714" y="0.470588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="logar" sid="4623486729081622">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4179977885113496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\WAVES\Pictures\GAME\LOGAR.png">
+                        <collision-poly>
+                            <point x="0.04" y="0.12" />
+                            <point x="0.493333" y="0.28" />
+                            <point x="0.906667" y="0.28" />
+                            <point x="0.973333" y="0.48" />
+                            <point x="0.92" y="0.76" />
+                            <point x="0.493333" y="0.76" />
+                            <point x="0.04" y="0.88" />
+                            <point x="0.0266667" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="high" pingpong="0" repeatcount="1" repeatto="0" sid="5730975435272568" speed="5">
+                    <frame duration="1" hotspotX="0.506667" hotspotY="0.52" original-source="C:\Users\WAVES\Pictures\GAME\LOGAR_.png">
+                        <collision-poly>
+                            <point x="0.04" y="0.12" />
+                            <point x="0.493333" y="0.28" />
+                            <point x="0.906667" y="0.28" />
+                            <point x="0.973333" y="0.48" />
+                            <point x="0.92" y="0.76" />
+                            <point x="0.493333" y="0.76" />
+                            <point x="0.04" y="0.88" />
+                            <point x="0.0266667" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="9919141035194457">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2986918398622307" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\WAVES\Pictures\GAME\lades.png">
+                        <collision-poly>
+                            <point x="0.132353" y="0.28125" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.852941" y="0.3125" />
+                            <point x="0.632353" y="0.5" />
+                            <point x="0.955882" y="0.90625" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.0588235" y="0.875" />
+                            <point x="0.0882353" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="caption" sid="6105235271205609">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="time" sid="1465278890330677" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Anchor" sid="8506189009197153">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="captionSide" sid="1950876537195351">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5340222473339227">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1094311946868303">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="barreira" sid="9313561351820918">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="attack" sid="7227790227386264">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="4687443300988431">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1280953273745336" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\WAVES\Pictures\GAME\attack.png">
+                        <collision-poly>
+                            <point x="0.130435" y="0.157895" />
+                            <point x="0.5" y="0.0526316" />
+                            <point x="0.913043" y="0.105263" />
+                            <point x="0.804348" y="0.5" />
+                            <point x="0.76087" y="0.710526" />
+                            <point x="0.5" y="0.947368" />
+                            <point x="0.130435" y="0.842105" />
+                            <point x="0.0217391" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="down" pingpong="0" repeatcount="1" repeatto="0" sid="7133371375890081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.130435" y="0.157895" />
+                            <point x="0.5" y="0.0526316" />
+                            <point x="0.913043" y="0.105263" />
+                            <point x="0.804348" y="0.5" />
+                            <point x="0.76087" y="0.710526" />
+                            <point x="0.5" y="0.947368" />
+                            <point x="0.130435" y="0.842105" />
+                            <point x="0.0217391" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MainPerson2" sid="5999874382531311">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="life" sid="1386699506407062" type="number" />
+                <instance-variable name="Cleaning" sid="3045780772854142" type="number" />
+                <instance-variable name="Cleanned_Bagui" sid="765008571759807" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="3108834481844651">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="7503820821438985">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="290350670359332">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="7948795873110245">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="8035066781366252">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="StopFront" pingpong="0" repeatcount="1" repeatto="0" sid="4520225100417169" speed="15">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\pixel\front.png">
+                        <collision-poly>
+                            <point x="0.321429" y="0.794445" />
+                            <point x="0.821428" y="0.794445" />
+                            <point x="0.880952" y="0.972222" />
+                            <point x="0.25" y="0.977778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopFrontSick" pingpong="0" repeatcount="1" repeatto="0" sid="8715182823278434" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.309524" y="0.8" />
+                            <point x="0.714285" y="0.794445" />
+                            <point x="0.809524" y="0.977778" />
+                            <point x="0.178571" y="0.977778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="FrontWalk" pingpong="0" repeatcount="1" repeatto="0" sid="7333779205366952" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.309524" y="0.788889" />
+                            <point x="0.714285" y="0.788889" />
+                            <point x="0.797619" y="0.977778" />
+                            <point x="0.202381" y="0.972222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.308824" y="0.788889" />
+                            <point x="0.823529" y="0.788889" />
+                            <point x="0.838235" y="0.911111" />
+                            <point x="0.235294" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.321429" y="0.816666" />
+                            <point x="0.714285" y="0.816667" />
+                            <point x="0.833333" y="0.966667" />
+                            <point x="0.178571" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.220588" y="0.805555" />
+                            <point x="0.720588" y="0.805556" />
+                            <point x="0.735294" y="0.972222" />
+                            <point x="0.161765" y="0.905555" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="FrontWalkSick" pingpong="0" repeatcount="1" repeatto="0" sid="947659339699949" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.345238" y="0.8" />
+                            <point x="0.714285" y="0.794445" />
+                            <point x="0.833333" y="0.977778" />
+                            <point x="0.190476" y="0.961111" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.338235" y="0.788889" />
+                            <point x="0.823529" y="0.805556" />
+                            <point x="0.838235" y="0.9" />
+                            <point x="0.235294" y="0.972222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.333333" y="0.816667" />
+                            <point x="0.714285" y="0.816667" />
+                            <point x="0.821428" y="0.977778" />
+                            <point x="0.202381" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.235294" y="0.8" />
+                            <point x="0.67647" y="0.800001" />
+                            <point x="0.764706" y="0.972222" />
+                            <point x="0.191176" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="FrontRun" pingpong="0" repeatcount="1" repeatto="0" sid="3189184092904907" speed="10">
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.338235" y="0.801136" />
+                            <point x="0.808823" y="0.744318" />
+                            <point x="0.823529" y="0.863636" />
+                            <point x="0.25" y="0.971591" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.308823" y="0.813953" />
+                            <point x="0.779412" y="0.80814" />
+                            <point x="0.823529" y="0.912791" />
+                            <point x="0.205882" y="0.976744" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.191176" y="0.738636" />
+                            <point x="0.705882" y="0.789773" />
+                            <point x="0.764706" y="0.977273" />
+                            <point x="0.147059" y="0.857955" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.220588" y="0.802326" />
+                            <point x="0.691176" y="0.802326" />
+                            <point x="0.764706" y="0.965116" />
+                            <point x="0.176471" y="0.912791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopBack" pingpong="0" repeatcount="1" repeatto="0" sid="8464661177046078" speed="15">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\pixel\back.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.789773" />
+                            <point x="0.72619" y="0.795454" />
+                            <point x="0.75" y="0.977273" />
+                            <point x="0.25" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopBackSick" pingpong="0" repeatcount="1" repeatto="0" sid="4363752125344475" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.333333" y="0.784091" />
+                            <point x="0.642857" y="0.784091" />
+                            <point x="0.761904" y="0.971591" />
+                            <point x="0.22619" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="BackWalk" pingpong="0" repeatcount="1" repeatto="0" sid="1588557737348324" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.309524" y="0.784091" />
+                            <point x="0.654762" y="0.778409" />
+                            <point x="0.75" y="0.954545" />
+                            <point x="0.22619" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.277778" y="0.778409" />
+                            <point x="0.75" y="0.767046" />
+                            <point x="0.736111" y="0.886364" />
+                            <point x="0.25" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.309524" y="0.784091" />
+                            <point x="0.690476" y="0.789773" />
+                            <point x="0.761904" y="0.965909" />
+                            <point x="0.238095" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.222222" y="0.767045" />
+                            <point x="0.736111" y="0.767045" />
+                            <point x="0.777778" y="0.977273" />
+                            <point x="0.222222" y="0.909091" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="BackRun" pingpong="0" repeatcount="1" repeatto="0" sid="5813667680880224" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.325" y="0.778409" />
+                            <point x="0.7125" y="0.789773" />
+                            <point x="0.7625" y="0.852273" />
+                            <point x="0.2625" y="0.977273" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.291667" y="0.784884" />
+                            <point x="0.763889" y="0.790698" />
+                            <point x="0.777778" y="0.930233" />
+                            <point x="0.236111" y="0.965116" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.275" y="0.767046" />
+                            <point x="0.6875" y="0.784091" />
+                            <point x="0.7125" y="0.977273" />
+                            <point x="0.2625" y="0.840909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.263889" y="0.77907" />
+                            <point x="0.666667" y="0.77907" />
+                            <point x="0.763889" y="0.97093" />
+                            <point x="0.236111" y="0.912791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="BackWalkSick" pingpong="0" repeatcount="1" repeatto="0" sid="2421963291397756" speed="5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.309524" y="0.795455" />
+                            <point x="0.690476" y="0.795454" />
+                            <point x="0.761904" y="0.971591" />
+                            <point x="0.238095" y="0.971591" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.333333" y="0.767045" />
+                            <point x="0.763889" y="0.767045" />
+                            <point x="0.805555" y="0.892046" />
+                            <point x="0.236111" y="0.977273" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.345238" y="0.801136" />
+                            <point x="0.714285" y="0.801136" />
+                            <point x="0.773809" y="0.971591" />
+                            <point x="0.238095" y="0.965909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.263889" y="0.767045" />
+                            <point x="0.722222" y="0.767045" />
+                            <point x="0.791667" y="0.965909" />
+                            <point x="0.222222" y="0.903409" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopSide" pingpong="0" repeatcount="1" repeatto="0" sid="3170161099394057" speed="15">
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.456522">
+                        <collision-poly>
+                            <point x="0.5625" y="0.782609" />
+                            <point x="0.760416" y="0.77174" />
+                            <point x="0.875" y="0.983696" />
+                            <point x="0.5" y="0.951087" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="StopSideSick" pingpong="0" repeatcount="1" repeatto="0" sid="6387269027698348" speed="5">
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.916666" y="0.847826" />
+                            <point x="0.875" y="0.964674" />
+                            <point x="0.510416" y="0.923913" />
+                            <point x="0.583333" y="0.771738" />
+                            <point x="0.802083" y="0.777174" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="SideWalk" pingpong="0" repeatcount="1" repeatto="0" sid="8320986538790773" speed="5">
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.916667" y="0.956522" />
+                            <point x="0.5" y="0.951087" />
+                            <point x="0.5625" y="0.788044" />
+                            <point x="0.822917" y="0.782609" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.357143" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.428571" y="0.988889" />
+                            <point x="0.196429" y="0.883333" />
+                            <point x="0.357143" y="0.75" />
+                            <point x="0.8125" y="0.761111" />
+                            <point x="0.955357" y="0.883334" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.916667" y="0.978261" />
+                            <point x="0.489583" y="0.951087" />
+                            <point x="0.552083" y="0.788044" />
+                            <point x="0.8125" y="0.777175" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.357143" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.794642" y="0.983333" />
+                            <point x="0.357143" y="0.938889" />
+                            <point x="0.245536" y="0.841667" />
+                            <point x="0.357143" y="0.766667" />
+                            <point x="0.803571" y="0.772222" />
+                            <point x="0.964286" y="0.908334" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="SideRun" pingpong="0" repeatcount="1" repeatto="0" sid="5126462143404598" speed="10">
+                    <frame duration="1" hotspotX="0.580645" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.991935" y="0.912791" />
+                            <point x="0.838709" y="0.97093" />
+                            <point x="0.233871" y="0.924419" />
+                            <point x="0.145161" y="0.796512" />
+                            <point x="0.241936" y="0.744186" />
+                            <point x="0.830645" y="0.831395" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.55" y="1" />
+                            <point x="0.28" y="0.920455" />
+                            <point x="0.42" y="0.784091" />
+                            <point x="0.58" y="0.818182" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.580645" hotspotY="0.465116">
+                        <collision-poly>
+                            <point x="0.830645" y="0.982558" />
+                            <point x="0.258064" y="0.883721" />
+                            <point x="0.165323" y="0.776163" />
+                            <point x="0.298387" y="0.726744" />
+                            <point x="0.959677" y="0.901163" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.454545">
+                        <collision-poly>
+                            <point x="0.58" y="1" />
+                            <point x="0.25" y="0.903409" />
+                            <point x="0.37" y="0.801136" />
+                            <point x="0.61" y="0.823863" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="SideWalkSick" pingpong="0" repeatcount="1" repeatto="0" sid="2554900668922836" speed="5">
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.9375" y="0.858696" />
+                            <point x="0.848958" y="0.964674" />
+                            <point x="0.5" y="0.940217" />
+                            <point x="0.572917" y="0.766305" />
+                            <point x="0.791666" y="0.777175" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535714" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.973214" y="0.883333" />
+                            <point x="0.375" y="0.961111" />
+                            <point x="0.196429" y="0.875" />
+                            <point x="0.357143" y="0.772222" />
+                            <point x="0.839286" y="0.772223" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.434783">
+                        <collision-poly>
+                            <point x="0.958333" y="0.880434" />
+                            <point x="0.78125" y="0.978261" />
+                            <point x="0.489583" y="0.910327" />
+                            <point x="0.572917" y="0.788044" />
+                            <point x="0.791667" y="0.782609" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535714" hotspotY="0.444444">
+                        <collision-poly>
+                            <point x="0.982143" y="0.927778" />
+                            <point x="0.8125" y="0.983334" />
+                            <point x="0.236607" y="0.888889" />
+                            <point x="0.339286" y="0.75" />
+                            <point x="0.794643" y="0.738889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="4413318706790629" speed="10">
+                    <frame duration="1" hotspotX="0.205882" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida1.png">
+                        <collision-poly>
+                            <point x="0.897059" y="0.638298" />
+                            <point x="0.470588" y="0.382979" />
+                            <point x="0.470588" y="0.297872" />
+                            <point x="0.970588" y="0.0851064" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.186667" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida2.png">
+                        <collision-poly>
+                            <point x="0.893333" y="0.744681" />
+                            <point x="0.426666" y="0.404255" />
+                            <point x="0.44" y="0.148936" />
+                            <point x="1" y="0.0212766" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.215385" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida3.png">
+                        <collision-poly>
+                            <point x="0.923077" y="0.702128" />
+                            <point x="0.661538" y="0.553192" />
+                            <point x="0.676923" y="0.106383" />
+                            <point x="0.953846" y="0.191489" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.4375" hotspotY="0.468085" original-source="C:\Users\PRISM\Google Drive\ZIKA\pixel\insecticida.png">
+                        <collision-poly>
+                            <point x="1" y="0.510638" />
+                            <point x="0.96875" y="0.340426" />
+                            <point x="0.96875" y="0.276596" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Die" pingpong="0" repeatcount="0" repeatto="0" sid="5632094112734617" speed="3">
+                    <frame duration="1" hotspotX="0.484848" hotspotY="0.21875" original-source="D:\Carlos\Ufpa\Projects\Construct\sit.png" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="-0.5" original-source="D:\Carlos\Ufpa\Projects\Construct\dead.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Die2" pingpong="0" repeatcount="0" repeatto="0" sid="354179683301234" speed="3">
+                    <frame duration="1" hotspotX="0.484848" hotspotY="0.21875" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="recicla" sid="8881778614664402">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="win" sid="501418213515911">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="recicla2" sid="5910249660112173">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="recicla3" sid="9453121515173441">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="recicla4" sid="54709199931139">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="recicla5" sid="5363371537331925">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="recicla6" sid="2908476439662008">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="recicla7" sid="8698168952929778">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="continuar" sid="4957437461136333">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="balde" sid="1597814687879798">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9192970535602161" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\balde (1).png">
+                        <collision-poly>
+                            <point x="0.0757576" y="0.0675676" />
+                            <point x="0.5" y="0.027027" />
+                            <point x="0.909091" y="0.0810811" />
+                            <point x="0.909091" y="0.5" />
+                            <point x="0.833333" y="0.851351" />
+                            <point x="0.5" y="1" />
+                            <point x="0.166667" y="0.851351" />
+                            <point x="0.0757576" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bar" sid="7285508923189607">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5171569963563924" speed="5">
+                    <frame duration="1" hotspotX="42" hotspotY="2.9" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="speak" sid="2303351607986748">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="cesta" sid="5865122798476917">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="5044167457404758">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="8384146868576886">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2798710529510267" speed="5">
+                    <frame duration="1" hotspotX="0.395349" hotspotY="0.459459" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\Pixel\garbage.png">
+                        <collision-poly>
+                            <point x="0.585417" y="0.662798" />
+                            <point x="0.626566" y="0.834459" />
+                            <point x="0.164861" y="0.837838" />
+                            <point x="0.224369" y="0.663198" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="balao" sid="9377175084627803">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1172677167424004">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4091509930518992">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2181668170613152" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="H:\balao.png">
+                        <collision-poly>
+                            <point x="0.00649351" y="0.0181818" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993506" y="0.0181818" />
+                            <point x="0.993506" y="0.981818" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00649351" y="0.981818" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="downShadow2" sid="990890785469137">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673239518141281" speed="5">
+                    <frame duration="1" hotspotX="0.504854" hotspotY="0.5" original-source="C:\Users\KennedySouza\Google Drive\ZIKA\downShadow.png">
+                        <collision-poly>
+                            <point x="0.495146" y="0.380952" />
+                            <point x="0.699029" y="0.5" />
+                            <point x="0.495146" y="0.619048" />
+                            <point x="0.300971" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="barreiras" sid="5676059318916624">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8191189051859057">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2504941721152496" speed="5">
+                    <frame duration="1" hotspotX="0.1" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tree1" sid="178519362392764">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8806392270501039">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5628909128946661" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.828947" original-source="H:\Lades2D\jambeiro.png">
+                        <collision-poly>
+                            <point x="0.517156" y="0.88569" />
+                            <point x="0.583333" y="0.917763" />
+                            <point x="0.518382" y="0.956415" />
+                            <point x="0.455882" y="0.919408" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tree2" sid="7389455025212968">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5893714691956802">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395696994547178" speed="5">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.808824" original-source="H:\Lades2D\tree1.png">
+                        <collision-poly>
+                            <point x="0.686956" y="0.863051" />
+                            <point x="0.495652" y="0.970588" />
+                            <point x="0.331522" y="0.870404" />
+                            <point x="0.506522" y="0.766544" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tree3" sid="851469865583256">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3686691570768356">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1225714756325607" speed="5">
+                    <frame duration="1" hotspotX="0.495413" hotspotY="0.81203" original-source="H:\Lades2D\tree2.png">
+                        <collision-poly>
+                            <point x="0.615825" y="0.867481" />
+                            <point x="0.483945" y="0.926692" />
+                            <point x="0.375" y="0.863722" />
+                            <point x="0.486239" y="0.81203" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tree4" sid="2904912553022456">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5483078868576413">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4714627624958864" speed="5">
+                    <frame duration="1" hotspotX="0.494845" hotspotY="0.8125" original-source="H:\Lades2D\tree3.png">
+                        <collision-poly>
+                            <point x="0.497423" y="0.818359" />
+                            <point x="0.618557" y="0.896484" />
+                            <point x="0.492268" y="0.9375" />
+                            <point x="0.365979" y="0.876953" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="balao2" sid="8015524614910598">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="4267347674608527">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7113899680881963" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="H:\balao.png">
+                        <collision-poly>
+                            <point x="0.00649351" y="0.0181818" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993506" y="0.0181818" />
+                            <point x="0.993506" y="0.981818" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00649351" y="0.981818" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="3556838072761731">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1582858026167687" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="topCaption" sid="7403785367196601">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3119585361302841">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1507736539290371">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5799259444073962" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="H:\balao.png">
+                        <collision-poly>
+                            <point x="0.00649351" y="0.0181818" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993506" y="0.0181818" />
+                            <point x="0.993506" y="0.981818" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00649351" y="0.981818" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fb_connector" sid="8080864996612186">
+            <plugin id="Facebook" />
+        </object-type>
+        <object-type name="Sprite10" sid="9678966569613409">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="venceu" pingpong="0" repeatcount="1" repeatto="0" sid="8255902820733396" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\waves\Google Drive\ZIKA\menu dos zika\Sem Título-1.png">
+                        <collision-poly>
+                            <point x="0.0343348" y="0.173913" />
+                            <point x="0.965665" y="0.173913" />
+                            <point x="0.959227" y="0.793478" />
+                            <point x="0.5" y="0.793478" />
+                            <point x="0.0493562" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="perdeu" pingpong="0" repeatcount="1" repeatto="0" sid="6620125836399345" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\Users\waves\Google Drive\ZIKA\menu dos zika\Sem Título-2.png">
+                        <collision-poly>
+                            <point x="0.0336134" y="0.172043" />
+                            <point x="0.966387" y="0.172043" />
+                            <point x="0.970588" y="0.494624" />
+                            <point x="0.957983" y="0.784946" />
+                            <point x="0.5" y="0.784946" />
+                            <point x="0.0504202" y="0.741935" />
+                            <point x="0.0357143" y="0.494624" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Fase1.xml</layout>
+        <layout>Start.xml</layout>
+        <layout>GameOver1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Fase1.xml</event-sheet>
+        <event-sheet>Start.xml</event-sheet>
+        <event-sheet>GameOver1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="0" />
+        <global-instance type="Touch" uid="28">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="46" />
+        <global-instance type="fb_connector" uid="35">
+            <properties>
+                <app-id></app-id>
+                <app-secret></app-secret>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
